@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eternal World Roleplay - Home</title>
+  <link rel="icon" type="image/png" href="/contents/logo.png">
+  <link rel="stylesheet" href="/home/home.css" />
+  <script src="/home/home.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="http://localhost:2255/">
+      <img src="../contents/logo.png" alt="Logo" class="logo" />
+    </a>
+    <nav>
+      <a href="../aboutus.html">About Us</a>
+      <a href="../event.html">Events</a>
+      <a href="https://discord.gg/S78FrsfTHp" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="../premium/premium.html">Premium</a>
+    </nav>
+    <div id="profile-container" class="profile-dropdown" style="display: none;">
+      <img id="profile-pic" class="profile-pic" src="../contents/default-avatar.png" alt="Profile" />
+      <div class="dropdown-content">
+        <a href="/public/my-profile.html">My Profile</a>
+        <a href="#" onclick="handleLogout(event)">Logout</a>
+        <a href="/public/panel.html" id="panel-link" style="display: none;">Panel</a>
+      </div>
+    </div>
+    <div id="login-box" class="login-box" onclick="handleAuthAction()">Login</div>
+  </header>
+
+  <section class="main">
+    <div class="server-info">
+      <h1>Eternal World Roleplay</h1>
+      <p>A fully immersive roleplay experience</p>
+<div class="status-container">
+  <div class="status-box">
+    <div class="player-status">
+      <img src="../contents/person.png" alt="Player Icon" />
+      <strong>Online:</strong>
+      <span id="player-count">0/150</span>
+
+      <!-- Progress bar placed directly under player count -->
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <div class="server-status">
+      <img src="../contents/global.png" alt="Server Icon" />
+      <strong>Server Status:</strong>
+      <span id="server-status">Offline</span>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- New Feedback Section -->
+<section class="feedback-section">
+<div class="feedback-section" id="feedback-section">
+  <h2>Feedback</h2>
+  <textarea id="feedback-input" placeholder="Write your feedback here..."></textarea>
+  <button id="send-feedback-btn">Send Feedback</button>
+  <div id="feedback-status"></div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 Eternal World Roleplay. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

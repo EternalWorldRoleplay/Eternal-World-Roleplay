@@ -1,0 +1,267 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../contents/home-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  min-height: 200vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+  cursor: pointer;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #4d55cc;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  transition: border-color 0.3s;
+}
+
+.profile-pic:hover {
+  border-color: #4d55cc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #4d55cc;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.login-box {
+  color: #ffffff;
+  padding: 12px 16px;
+  background-color: #4d55cc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.login-box:hover {
+  background-color: #3a42a6;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* Server Info */
+.server-info {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  margin-bottom: 100px; /* Larger gap for better spacing */
+}
+
+/* Feedback Section */
+.feedback-section {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid #4d55cc; /* Single small border */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; /* Centered */
+}
+
+.feedback-section h2 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #211c84;
+}
+
+#feedback-status {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  min-height: 20px;
+}
+
+#feedback-status.success {
+  color: green;
+}
+
+#feedback-status.error {
+  color: red;
+}
+
+#feedback-input {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #211c84; /* Single small border */
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+#send-feedback-btn {
+  background-color: #4d55cc;
+  border: none;
+  padding: 12px 30px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#send-feedback-btn:hover {
+  background-color: #3a42a6;
+}
+
+/* Status Container Spacing */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.status-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+.player-status,
+.server-status {
+  flex: 1;
+  background-color: #211c84;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+}
+
+.player-status img,
+.server-status img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.player-status strong,
+.server-status strong {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+#player-count {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.progress-bar-container {
+  width: 100%;
+  max-width: 300px;
+  height: 8px; /* reduced size */
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #4d55cc;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.footer {
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
+  padding: 15px 0;
+  background-color: transparent; /* or a semi-transparent black if you want */
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  user-select: none;
+}
